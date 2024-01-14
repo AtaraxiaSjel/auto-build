@@ -1,2 +1,6 @@
+# act
 .env
 .secrets
+# nix
+/gcroot
+/result*
