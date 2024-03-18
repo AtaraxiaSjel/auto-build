@@ -25,7 +25,7 @@ jobs:
         git_commit_gpgsign: true
 
     - name: Install nix
-      uses: nixbuild/nix-quick-install-action@v26
+      uses: nixbuild/nix-quick-install-action@v27
       with:
         load_nixConfig: false
 
