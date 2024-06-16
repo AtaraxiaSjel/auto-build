@@ -25,15 +25,13 @@ jobs:
         git_commit_gpgsign: true
 
     - name: Install nix
-      uses: nixbuild/nix-quick-install-action@v28
-      with:
-        load_nixConfig: false
+      uses: cachix/install-nix-action@v27
 
     - name: Update flake
       run: nix flake update
 
-    - name: Evaluate hosts configurations
-      run: bash .github/scripts/eval.sh --flake .#packages.x86_64-linux
+    - name: Evaluate flake
+      run: .github/scripts/eval.sh --flake .#packages.x86_64-linux
 
     - name: Commit updated flake.lock
       run: |
