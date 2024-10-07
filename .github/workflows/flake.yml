@@ -25,7 +25,7 @@ jobs:
         git_commit_gpgsign: true
 
     - name: Install nix
-      uses: cachix/install-nix-action@v27
+      uses: cachix/install-nix-action@v30
 
     - name: Update flake
       run: nix flake update
